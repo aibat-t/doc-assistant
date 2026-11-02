@@ -1,0 +1,24 @@
+# Документы корпуса. Источник — ИПС «Әділет» (adilet.zan.kz).
+#
+# url      — канонический адрес документа: https://adilet.zan.kz/<rus|kaz>/docs/<код>
+#            (казахская версия — тот же код, путь /kaz/ вместо /rus/)
+# lang     — ru | kk, должен совпадать с языком в URL
+# doc_type — code | law | decree; если не указан, берётся по первой букве кода (K — кодекс, Z — закон)
+# title    — если не указан, берётся из <title> страницы
+#
+# Скачать:        uv run docs-assistant fetch
+# Зарегистрировать: uv run docs-assistant register
+
+documents:
+  # --- Кодексы, русский ---
+  - {url: "https://adilet.zan.kz/rus/docs/K1500000414", lang: ru, title: "Трудовой кодекс Республики Казахстан"}
+  # Новый Налоговый кодекс 2025 года (№ 214-VIII), а не старый K1700000120
+  - {url: "https://adilet.zan.kz/rus/docs/K2500000214", lang: ru, title: "Налоговый кодекс Республики Казахстан"}
+  - {url: "https://adilet.zan.kz/rus/docs/K940001000_", lang: ru, title: "Гражданский кодекс Республики Казахстан (Общая часть)"}
+  - {url: "https://adilet.zan.kz/rus/docs/K990000409_", lang: ru, title: "Гражданский кодекс Республики Казахстан (Особенная часть)"}
+
+  # --- Кодексы, казахский ---
+  - {url: "https://adilet.zan.kz/kaz/docs/K1500000414", lang: kk}
+  - {url: "https://adilet.zan.kz/kaz/docs/K2500000214", lang: kk}
+  - {url: "https://adilet.zan.kz/kaz/docs/K940001000_", lang: kk}
+  - {url: "https://adilet.zan.kz/kaz/docs/K990000409_", lang: kk}

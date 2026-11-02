@@ -22,3 +22,35 @@ documents:
   - {url: "https://adilet.zan.kz/kaz/docs/K2500000214", lang: kk}
   - {url: "https://adilet.zan.kz/kaz/docs/K940001000_", lang: kk}
   - {url: "https://adilet.zan.kz/kaz/docs/K990000409_", lang: kk}
+
+  # --- Законы, русский (30) ---
+  - {url: "https://adilet.zan.kz/rus/docs/Z1300000094", lang: ru}  # О персональных данных и их защите
+  - {url: "https://adilet.zan.kz/rus/docs/Z100000274_", lang: ru}  # О защите прав потребителей
+  - {url: "https://adilet.zan.kz/rus/docs/Z070000319_", lang: ru}  # Об образовании
+  - {url: "https://adilet.zan.kz/rus/docs/Z1500000410", lang: ru}  # О противодействии коррупции
+  - {url: "https://adilet.zan.kz/rus/docs/Z1500000401", lang: ru}  # О доступе к информации
+  - {url: "https://adilet.zan.kz/rus/docs/Z1500000418", lang: ru}  # О кибербезопасности
+  - {url: "https://adilet.zan.kz/rus/docs/Z1400000202", lang: ru}  # О разрешениях и уведомлениях
+  - {url: "https://adilet.zan.kz/rus/docs/Z970000094_", lang: ru}  # О жилищных отношениях
+  - {url: "https://adilet.zan.kz/rus/docs/Z1600000480", lang: ru}  # О правовых актах
+  - {url: "https://adilet.zan.kz/rus/docs/Z980000220_", lang: ru}  # О товариществах с ограниченной и дополнительной ответственностью
+  - {url: "https://adilet.zan.kz/rus/docs/Z030000415_", lang: ru}  # Об акционерных обществах
+  - {url: "https://adilet.zan.kz/rus/docs/Z950002444_", lang: ru}  # О банках и банковской деятельности в Республике Казахстан
+  - {url: "https://adilet.zan.kz/rus/docs/Z040000567_", lang: ru}  # О связи
+  - {url: "https://adilet.zan.kz/rus/docs/Z1100000483", lang: ru}  # О религиозной деятельности и религиозных объединениях
+  - {url: "https://adilet.zan.kz/rus/docs/Z2400000106", lang: ru}  # О государственных закупках
+  - {url: "https://adilet.zan.kz/rus/docs/Z970000151_", lang: ru}  # О языках в Республике Казахстан
+  - {url: "https://adilet.zan.kz/rus/docs/Z010000148_", lang: ru}  # О местном государственном управлении и самоуправлении в Республике Казахстан
+  - {url: "https://adilet.zan.kz/rus/docs/Z070000310_", lang: ru}  # О государственной регистрации прав на недвижимое имущество
+  - {url: "https://adilet.zan.kz/rus/docs/Z030000461_", lang: ru}  # О рынке ценных бумаг
+  - {url: "https://adilet.zan.kz/rus/docs/Z1100000401", lang: ru}  # О медиации
+  - {url: "https://adilet.zan.kz/rus/docs/Z1500000405", lang: ru}  # Об обязательном социальном медицинском страховании
+  - {url: "https://adilet.zan.kz/rus/docs/Z070000234_", lang: ru}  # О бухгалтерском учете и финансовой отчетности
+  - {url: "https://adilet.zan.kz/rus/docs/Z000000126_", lang: ru}  # О страховой деятельности
+  - {url: "https://adilet.zan.kz/rus/docs/Z1200000056", lang: ru}  # О микрофинансовой деятельности
+  - {url: "https://adilet.zan.kz/rus/docs/Z1300000088", lang: ru}  # О государственных и социально ответственных услугах
+  - {url: "https://adilet.zan.kz/rus/docs/Z1400000194", lang: ru}  # О дорожном движении
+  - {url: "https://adilet.zan.kz/rus/docs/Z020000345_", lang: ru}  # О правах ребенка в Республике Казахстан
+  - {url: "https://adilet.zan.kz/rus/docs/Z1100000477", lang: ru}  # О миграции населения
+  - {url: "https://adilet.zan.kz/rus/docs/Z040000588_", lang: ru}  # Об электроэнергетике
+  - {url: "https://adilet.zan.kz/rus/docs/Z090000191_", lang: ru}  # О противодействии легализации (отмыванию) доходов, полученных преступным путем, финансированию терроризма и финансированию распространения оружия массового уничтожения

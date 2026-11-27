@@ -2,7 +2,7 @@
 
 Ассистент, который отвечает на вопросы по законодательству Республики Казахстан со ссылками на конкретные статьи. Поиск гибридный (pgvector + BM25 + reranker), качество подтверждено цифрами evals. Асинхронная индексация через RabbitMQ и стриминг ответа — следующий уровень после MVP.
 
-> Статус: MVP, этапы 0–1 готовы (корпус из 38 документов зарегистрирован в БД), дальше этап 2 — парсинг и чанкинг. Метрики качества появятся после этапа 5. План — [docs/PLAN.md](docs/PLAN.md).
+> Статус: MVP, этапы 0–2 готовы (38 документов → 6 431 статья → 10 826 чанков), дальше этап 3 — индексация и поиск. Метрики качества появятся после этапа 5. План — [docs/PLAN.md](docs/PLAN.md).
 
 ## Быстрый старт
 
@@ -36,6 +36,7 @@ curl.exe localhost:8000/health/ready
 | `uv run alembic revision --autogenerate -m "..."` | Черновик новой миграции по изменённым моделям (проверить глазами) |
 | `uv run docs-assistant fetch [--only K1500000414] [--force]` | Скачать документы (без `--force` существующие файлы не перекачиваются) |
 | `uv run docs-assistant register [--only ...]` | Создать запись или новую версию, если изменился текст |
+| `uv run python scripts/inspect_chunks.py [--only ...] [--out chunks.txt]` | Статистика чанков по корпусу и 20 случайных чанков (БД не нужна) |
 | `uv run docs-assistant api --reload` | API с автоперезагрузкой |
 | `uv run pytest` | Быстрые тесты без инфраструктуры |
 | `uv run pytest -m integration` | Интеграционные тесты (нужен `docker compose up`) |
@@ -64,12 +65,13 @@ src/docs_assistant/
 ├── models.py        # ORM-модели SQLAlchemy
 ├── infra/db.py      # async-движок и сессии
 ├── api/             # FastAPI: /health, /health/ready; дальше /documents, /ask
-├── ingestion/       # этап 1: sources, fetch_adilet, registry; дальше парсинг, чанкинг, воркер
+├── ingestion/       # этапы 1–2: sources, fetch_adilet, registry, parsers/html_adilet, chunking
 ├── retrieval/       # этапы 3, 5: вектор, BM25, RRF, rerank
 ├── generation/      # этап 4: промпты, LLM-клиент, цитаты
 └── infra/           # БД, очередь, кэш, трейсинг
 alembic/             # миграции схемы БД
 data/sources.yaml    # список документов корпуса
+scripts/             # inspect_chunks.py — ручная проверка чанкинга
 evals/               # этап 5: тестовые вопросы и отчёты
 docs/decisions.md    # журнал архитектурных решений
 ```

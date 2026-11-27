@@ -43,8 +43,10 @@ class Settings(BaseSettings):
     embedding_batch_size: int = 32
 
     # Чанкинг и поиск
-    chunk_size_tokens: int = 400
-    chunk_overlap_tokens: int = 50
+    # Токены e5 на весь чанк вместе с крошками. Окно модели — 512, запас — на «passage: »
+    # и служебные токены <s></s>. Перекрытие ~12 % — соседние куски длинной статьи.
+    chunk_size_tokens: int = 500
+    chunk_overlap_tokens: int = 60
     retrieval_candidates: int = 30
     retrieval_top_k: int = 5
     reranker_model: str = "BAAI/bge-reranker-v2-m3"
